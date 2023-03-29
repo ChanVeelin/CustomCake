@@ -23,17 +23,6 @@
 
         
       </fieldset>
-      <fieldset>
-        <legend>Optional</legend>
-        <label>Zip Code</label> 
-        <input type="text"       name="zip_num"   size="10" >      
-        <input type="button"     value="주소 찾기" class="dup" onclick="post_zip()"><br>
-        <label>Address</label> 
-        <input type="text"        name="addr1"   size="50"> <br>
-        <input type="text"        name="addr2"   size="25" style="margin-left: 140px"> <br>
-        <label>Phone Number</label> 
-        <input  type="text"       name="phone"><br>
-      </fieldset>
       <div class="clear"></div>
       <div id="buttons">
         <input type="button"    value="회원가입"   class="submit" onclick="go_save()"> 
