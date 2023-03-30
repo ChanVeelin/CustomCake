@@ -30,7 +30,7 @@
 				<a class="nav-link" href="index">홈</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="">추가할메뉴</a>
+				<a class="nav-link" href="">추가할메뉴</a>테스트
 			</li>
 		</ul>
 	</div>
