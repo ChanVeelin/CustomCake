@@ -18,7 +18,7 @@ public class BeforeAdvice {
 		if(args.length==0) {
 			System.out.printf("[사전처리] 메소드명 : %s(), 매개변수 없음\n", method);
 		}else {
-			System.out.printf("[사전처리] 메소드명 : %s(), 매개변수 : %s\n", method, args[0].toString());
+			System.out.printf("[사전처리] 메소드명 : %s(), 매개변수 : %s\n", method, args[0].toString());  
 		}
 	}
 }
