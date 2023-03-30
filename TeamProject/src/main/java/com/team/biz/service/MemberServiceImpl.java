@@ -26,5 +26,21 @@ public class MemberServiceImpl implements MemberService {
 		return mDao.loginID(vo);
 	}
 
+	@Override
+	public void insertMember(MemberVO memberVO) {
+		mDao.insertMember(memberVO);
+		
+	}
+
+	@Override
+	public String selectIdByNameEmail(MemberVO vo) {
+		return mDao.selectIdByNameEmail(vo);
+	}
+
+	@Override
+	public String selectPwdByIdNameEmail(MemberVO vo) {
+		return mDao.selectPwdByIdNameEmail(vo);
+	}
+
 
 }

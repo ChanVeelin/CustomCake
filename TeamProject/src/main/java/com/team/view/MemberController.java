@@ -21,9 +21,7 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
-	//
 
-	
 	//id 중복체크 화면 표시
 	@GetMapping(value="/id_check_form")
 	public String idCheckView(MemberVO vo, Model model) {
@@ -33,7 +31,7 @@ public class MemberController {
 		return "member/idcheck";
 	}
 	
-	//
+	//중복 액션
 	@PostMapping("/id_check_form")
 	public String idCheckAction(MemberVO vo, Model model) {
 		int result=memberService.confirmID(vo.getId());
@@ -42,10 +40,6 @@ public class MemberController {
 		return "member/idcheck";
 	}
 	
-
-	
-
-
 	
 	@GetMapping("/login_form")
 	public String loginView() {
@@ -63,8 +57,69 @@ public class MemberController {
 		}
 	}
 	
-
-
 	
+	@GetMapping("/logout")//로그아웃
+	public String logout(SessionStatus status) {
+		
+		status.setComplete();  // 세션 해지
+		
+		return "member/login";
+	}
 	
+	@GetMapping("/join")
+	public String joinView() {
+		
+		return "member/join";
+	}
+	
+	@PostMapping("/join")
+	public String joinAction(MemberVO vo,
+			@RequestParam(value="addr1", defaultValue="") String addr1,
+			@RequestParam(value="addr2", defaultValue="") String addr2,
+			@RequestParam(value="phone1", defaultValue="") String phone1,
+			@RequestParam(value="phone2", defaultValue="") String phone2,
+			@RequestParam(value="phone3", defaultValue="") String phone3) {
+		
+		vo.setAddress(addr1 + " " + addr2);
+		vo.setPhone(phone1 + "-" + phone2+ "-" + phone3);
+		memberService.insertMember(vo);
+		
+		return "member/login";
+	}
+
+	@GetMapping("/find_id_form")
+	public String findIdFormView() {
+		
+		return "member/findIdAndPassword";
+	}
+	
+	@PostMapping("/find_id")
+	public String findIdAction(MemberVO vo, Model model) {
+		
+		String id = memberService.selectIdByNameEmail(vo);
+		
+		if (id != null) {  // 아이디 조회 성공
+			model.addAttribute("message", 1);
+			model.addAttribute("id", id);
+		} else {
+			model.addAttribute("message", -1);
+		}
+		
+		return "member/findResult";  // 아이디 조회결과 화면표시
+	}
+	
+	@PostMapping("/find_pwd")
+	public String findPwdAction(MemberVO vo, Model model) {
+		
+		String pwd = memberService.selectPwdByIdNameEmail(vo);
+		
+		if (pwd != null) {
+			model.addAttribute("message", 1);
+			model.addAttribute("id", vo.getId());
+		} else {
+			model.addAttribute("message", -1);
+		}
+		
+		return "member/findPwdResult";
+	}
 }

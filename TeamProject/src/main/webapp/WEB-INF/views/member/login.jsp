@@ -17,7 +17,7 @@
         <div id="buttons">
             <input type="submit" value="로그인" class="submit">
             <input type="button" value="회원가입" class="cancel"
-                 onclick="location='contract'">
+                 onclick="location='join'">
             <input type="button" value="아이디 비밀번호 찾기" class="submit"
                  onclick="find_id_form()">     
         </div>

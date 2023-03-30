@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="member/member.js"></script>
+<script type="text/javascript" src= "member/postcode.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 <body>
 <nav class="border-bottom navbar navbar-expand-md bg-white navbar-light sticky-top">
@@ -49,7 +52,7 @@
        </li>
        <li><a href="logout">LOGOUT</a></li>
 				<li class="nav-item">
-					<a class="nav-link" href="">회원가입</a>
+					<a class="nav-link" href="join">회원가입</a>
 				</li>
        </c:otherwise> 
          </c:choose>

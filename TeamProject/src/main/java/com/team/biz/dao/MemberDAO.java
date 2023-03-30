@@ -38,11 +38,24 @@ public class MemberDAO {
 		return result;
 	}
 	
-	//회원 추가
-
+	//회원가입
+public void insertMember(MemberVO memberVO) {
+		
+		mybatis.insert("MemberMapper.insertMember", memberVO);
+	}
 	
 
-	
-	//이름, 이메일으로 아이디찾기
+		//이름과 이메일로 아이디 찾기
+	public String selectIdByNameEmail(MemberVO vo) {
+		
+		return mybatis.selectOne("MemberMapper.selectIdByNameEmail", vo);
+	}
 
+	// 아이디, 이름, 이메일로 비밀번호 찾기 
+	public String selectPwdByIdNameEmail(MemberVO vo) {
+		
+		return mybatis.selectOne("MemberMapper.selectPwdByIdNameEmail", vo);
+	}
+
+	// 비밀번호 메일로 보내기
 }
