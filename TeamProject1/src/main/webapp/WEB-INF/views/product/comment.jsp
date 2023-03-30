@@ -70,7 +70,7 @@
             <div>
                 <h3>구매후기 <span id="cCnt"> </span></h3> 
                 <div id="myform"><label for="rate1">★</label>${avg}</div>
-                
+                깃허브 테스트
             </div>
             	<div id="myform">
 					<fieldset>
