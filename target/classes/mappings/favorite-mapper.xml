@@ -14,7 +14,7 @@
    
    <!-- 찜내역 삭제 -->
    <delete id="deleteByFavorite">
-      DELETE FROM favorite WHERE id=#{id} AND product_no#{product_no}
+      DELETE FROM favorite WHERE product_no#{product_no}
    </delete>
  
 </mapper>

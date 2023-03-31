@@ -14,8 +14,8 @@ public class FavoriteDAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 	
-	public void insertFavorite() {
-		mybatis.insert("FavoriteMapper.insertFavorite");
+	public void insertFavorite(FavoriteVO vo) {
+		mybatis.insert("FavoriteMapper.insertFavorite",vo);
 	}
 	
 	public List<FavoriteVO> getListByFavorite(FavoriteVO vo){
@@ -23,8 +23,8 @@ public class FavoriteDAO {
 		return mybatis.selectList("FavoriteMapper.getListByFavorite",vo);
 	}
 	
-	public void deleteByFavorite(FavoriteVO vo) {
-		  mybatis.delete("FavoriteMapper.deleteByFavorite",vo);
+	public void deleteByFavorite(int product_no) {
+		  mybatis.delete("FavoriteMapper.deleteByFavorite",product_no);
 	}
 	
 }
