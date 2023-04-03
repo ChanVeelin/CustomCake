@@ -29,7 +29,7 @@
 	<p><p><p><p><p><p><p><p><p><p><p><p>
 	
 	
-	<form name="findPW" id="findPW" action="find_pwd" method="post">
+	<form name="findPwd" id="findPwd" action="find_pwd" method="post">
 	<table>
 	<tr>
 		<td align="right"><label> 아이디</label></td>
@@ -37,16 +37,18 @@
 	</tr>	
 	<tr>
 		<td align="right"><label> 이름</label></td>
-		<td><input type="text" name="name" id="name2" value=""></td>
+		<td><input type="text" name="receiverName" id="name2" value=""></td>
 	</tr>	
 	<tr>
 		<td align="right"><label> 이메일</label></td>
-		<td><input type="text" name="email" id="email2" value=""></td>
+		<td><input type="text" name="receiver" id="email2" value=""></td>
+		
 	</tr>
 	<tr>
-		<td align="center" colspan="2"><input type="button" value="비밀번호 찾기" onclick="findPassword()"></td>
+		<td align="center" colspan="2"><input type="button" value="비밀번호 찾기" onclick="sendpwd()"></td>
 	</tr>
 	</table>
+		${massege}
 	</form>
 	</div>
 </body>

@@ -100,6 +100,27 @@ function findMemberId() {
 		var form = document.getElementById("findId");
 		form.action = "find_id";
 		form.submit();
-	}
+	}	
+}
+
+function sendpwd(){
+	
+	if (document.getElementById("id2").value=="") {
+		alert("아이디를 입력해 주세요");
+		document.getElementById("id2").focus();
+		return false;
+	}else if (document.getElementById("name2").value=="") {
+		alert("이름을 입력해 주세요");
+		document.getElementById("name2").focus();
+		return false;
+	} else if (document.getElementById("email2").value=="") {
+		alert("이메일을 입력해 주세요");
+		document.getElementById("email2").focus();
+		return false;
+	} else {
+		var form = document.getElementById("findPwd");
+		form.action = "find_pwd";
+		form.submit();
+	}	
 }
 

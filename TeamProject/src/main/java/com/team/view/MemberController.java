@@ -8,11 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-
 import com.team.biz.dto.MemberVO;
 import com.team.biz.service.MemberService;
-
-
 
 @Controller
 @SessionAttributes("loginUser")
@@ -108,18 +105,5 @@ public class MemberController {
 		return "member/findResult";  // 아이디 조회결과 화면표시
 	}
 	
-	@PostMapping("/find_pwd")
-	public String findPwdAction(MemberVO vo, Model model) {
-		
-		String pwd = memberService.selectPwdByIdNameEmail(vo);
-		
-		if (pwd != null) {
-			model.addAttribute("message", 1);
-			model.addAttribute("id", vo.getId());
-		} else {
-			model.addAttribute("message", -1);
-		}
-		
-		return "member/findPwdResult";
-	}
 }
+
