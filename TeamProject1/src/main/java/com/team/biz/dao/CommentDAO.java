@@ -7,7 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.team.biz.dto.ProductCommentVO;
+import com.team.biz.dto.CommentVO;
 
 import utils.Criteria;
 
@@ -16,7 +16,7 @@ public class CommentDAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 	
-	public int saveComment(ProductCommentVO vo) {
+	public int saveComment(CommentVO vo) {
 		return mybatis.insert("CommentMapper.saveComment", vo);
 	}
 	
@@ -28,7 +28,7 @@ public class CommentDAO {
 		return mybatis.selectOne("CommentMapper.countCommentList", product_no);
 	}
 	
-	public List<ProductCommentVO> commentListWithPaging(Criteria criteria, int product_no) {
+	public List<CommentVO> commentListWithPaging(Criteria criteria, int product_no) {
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("criteria", criteria);
 		map.put("product_no", product_no);

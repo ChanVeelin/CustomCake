@@ -1,13 +1,3 @@
- 
-function go_next() {
-	if(document.formm.okon1[0].checked==true){
-    	document.formm.action="join_form";
-    	document.formm.submit();
-  	} else if(document.formm.okon1[1].checked==true){
-    	alert("약관에 동의하셔야 합니다.");
-  	}
-}
-
 function idcheck(){
 	if(document.getElementById("id").value==""){
 		alert("아이디를 입력 해 주세요.");

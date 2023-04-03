@@ -4,13 +4,17 @@
 	<typeAliases>
 		<typeAlias type="com.team.biz.dto.ProductVO" alias="product"/>
 		<typeAlias type="com.team.biz.dto.MemberVO" alias="member"/>
-		<typeAlias type="com.team.biz.dto.ProductCommentVO" alias="comment"/>
+		<typeAlias type="com.team.biz.dto.CommentVO" alias="comment"/>
+		<typeAlias type="com.team.biz.dto.NoticesVO" alias="notices"/>
+		<typeAlias type="com.team.biz.dto.CartVO" alias="cart"/>
 	</typeAliases>
 	<!-- sql매핑 -->
 	<mappers>
 		<mapper resource="mappings/product-mapping.xml"/>
 		<mapper resource="mappings/member-mapping.xml"/>
 		<mapper resource="mappings/comment-mapping.xml"/>
+		<mapper resource="mappings/notices-mapping.xml"/>
+		<mapper resource="mappings/cart-mapping.xml"/>
 	</mappers>
 	
 	

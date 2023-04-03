@@ -17,6 +17,7 @@ public class ProductDAO {
 	public List<ProductVO> getProductList() {
 		return mybatis.selectList("ProductMapper.getProductList");
 	}
+	
 	// 상품번호로 하나의 상품정보 얻어오기
 	public ProductVO getProduct(ProductVO vo) {
 		return mybatis.selectOne("ProductMapper.getProduct", vo);

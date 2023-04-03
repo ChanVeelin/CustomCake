@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.team.biz.dao.CommentDAO;
-import com.team.biz.dto.ProductCommentVO;
+import com.team.biz.dto.CommentVO;
 
 import utils.Criteria;
 
@@ -22,12 +22,12 @@ public class CommentServiceImpl implements CommentService {
 	}
 
 	@Override
-	public List<ProductCommentVO> getCommentListWithPaging(Criteria criteria, int product_no) {
+	public List<CommentVO> getCommentListWithPaging(Criteria criteria, int product_no) {
 		return cDao.commentListWithPaging(criteria, product_no);
 	}
 
 	@Override
-	public int saveComment(ProductCommentVO vo) {
+	public int saveComment(CommentVO vo) {
 		return cDao.saveComment(vo);
 	}
 
