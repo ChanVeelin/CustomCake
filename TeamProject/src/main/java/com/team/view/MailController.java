@@ -18,6 +18,7 @@ public class MailController {
     public String send(@ModelAttribute Email email, Model model) {
         try {
         	//이메일,아이디,이름
+        	System.out.println("send(): email="+email);
             emailService.sendMail(email); // dto (메일관련 정보)를 sendMail에 저장함
             model.addAttribute("message", "이메일이 발송되었습니다."); // 이메일이 발송되었다는 메시지를 출력시킨다.
  
