@@ -28,6 +28,7 @@
         <div id="buttons">
           <input type="button" value="주문서 작성하기"   class="submit"    onclick="location.href='cart_write_form?product_no='+${productVO.product_no}"> 
           <input type="reset"  value="취소"           class="cancel">
+          <input type="button" value="찜하기" class="submit" onclick="location.href='go_favorite'">
         </div>
       </form>  
     </div>

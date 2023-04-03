@@ -33,3 +33,19 @@ function readURL(input) {
 	    document.getElementById('preview').src = "";
 	  }
 	}
+	
+function go_favorite() {
+	var id = document.getElementById("id").value;
+	
+	if (id == null) {
+		alert("로그인후 가능합니다.")
+		document.getElementById("id").focus();
+		return "login";
+	} else{
+		alert("찜목록에 추가 되었습니다!")
+		var form = document.getElementById("theform");
+		form.action = "cart_insert";
+		form.submit();
+	} 
+}
+

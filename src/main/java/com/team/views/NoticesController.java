@@ -1,4 +1,4 @@
-package com.team.view;
+package com.team.views;
 
 import java.util.List;
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.team.biz.dao.ProductDAO;
 import com.team.biz.dto.ProductVO;
 
-@Service
+@Service("productService")
 public class ProductServiceImpl implements ProductService{
 	
 	@Autowired
