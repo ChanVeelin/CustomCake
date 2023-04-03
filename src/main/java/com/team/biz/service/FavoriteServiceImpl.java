@@ -33,4 +33,10 @@ public class FavoriteServiceImpl implements FavoriteService {
 
 	}
 
+	@Override
+	public void findLike(int favorite_no) {
+		
+		favoriteDao.findLike(favorite_no);
+	}
+
 }

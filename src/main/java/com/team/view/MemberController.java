@@ -1,4 +1,4 @@
-package com.team.views;
+package com.team.view;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

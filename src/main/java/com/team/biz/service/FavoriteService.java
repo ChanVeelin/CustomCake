@@ -11,5 +11,7 @@ public interface FavoriteService {
 	List<FavoriteVO> getListByFavorite(FavoriteVO vo);
 
 	void deleteByFavorite(int favorite_no);
+	
+	void findLike(int favorite_no);
 
 }

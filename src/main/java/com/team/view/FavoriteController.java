@@ -1,4 +1,4 @@
-package com.team.views;
+package com.team.view;
 
 import java.util.List;
 
@@ -43,8 +43,7 @@ public class FavoriteController {
 		if (loginUser == null) { // 로그인이 안된 경우
 			return "member/login";
 		} else {
-			// Cart List 조회 후
-			
+			//List 조회 후
 			List<FavoriteVO>favoriteList = favoriteService.getListByFavorite(vo);
 		    
 			// "cartList" 속성에 조회한 데이터를 저장
@@ -55,4 +54,19 @@ public class FavoriteController {
 		}
 		
 	}
+	@GetMapping("/like_Detail")
+	public String countFavorite(HttpSession session, Model model) {
+		// 로그인 확인 
+				MemberVO loginUser = (MemberVO)session.getAttribute("loginUser");
+				
+				if (loginUser == null) { // 로그인이 안된 경우
+					return "member/login";
+				} else {
+					
+				
+					}
+	}
+				
+	
+	
 }

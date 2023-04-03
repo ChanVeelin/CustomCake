@@ -27,4 +27,8 @@ public class FavoriteDAO {
 		  mybatis.delete("FavoriteMapper.deleteByFavorite",favorite_no);
 	}
 	
+	public void findLike(int favorite_no) {
+		mybatis.selectOne("FavoriteMapper.findLike",favorite_no);
+	}
+	
 }

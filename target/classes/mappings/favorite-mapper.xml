@@ -16,5 +16,10 @@
    <delete id="deleteByFavorite">
       DELETE FROM favorite WHERE favorite_no=#{favorite_no}
    </delete>
+   
+   <!-- 좋아요를 눌렀는지 확인 -->
+   <select id="findLike" resultType="int">
+		SELECT count(*) FROM favorite WHERE favorite_no = #{favorite_no} AND id = #{id}
+   </select>
  
 </mapper>
