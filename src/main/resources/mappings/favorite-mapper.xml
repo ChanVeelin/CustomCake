@@ -4,7 +4,7 @@
     
    <!-- 찜 추가 -->
    <insert id="insertFavorite">
-     INSERT INTO favorite (id,product_no,favorite_regdate) VALUES (#{id},#{product_no})
+     INSERT INTO favorite (favorite_no,id,product_no,favorite_regdate) VALUES (favorite_seq.NEXTVAL,#{id},#{product_no})
    </insert>
    
    <!-- 찜 목록 -->
@@ -14,7 +14,7 @@
    
    <!-- 찜내역 삭제 -->
    <delete id="deleteByFavorite">
-      DELETE FROM favorite WHERE product_no#{product_no}
+      DELETE FROM favorite WHERE favorite_no=#{favorite_no}
    </delete>
  
 </mapper>

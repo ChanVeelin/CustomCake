@@ -23,8 +23,8 @@ public class FavoriteDAO {
 		return mybatis.selectList("FavoriteMapper.getListByFavorite",vo);
 	}
 	
-	public void deleteByFavorite(int product_no) {
-		  mybatis.delete("FavoriteMapper.deleteByFavorite",product_no);
+	public void deleteByFavorite(int favorite_no) {
+		  mybatis.delete("FavoriteMapper.deleteByFavorite",favorite_no);
 	}
 	
 }

@@ -11,6 +11,7 @@ import lombok.ToString;
 @ToString
 public class FavoriteVO {
 	
+	private int favorite_no;
 	private String id;
 	private int product_no;
 	private Date favorite_regdate;

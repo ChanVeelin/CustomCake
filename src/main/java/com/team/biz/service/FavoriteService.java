@@ -10,6 +10,6 @@ public interface FavoriteService {
 
 	List<FavoriteVO> getListByFavorite(FavoriteVO vo);
 
-	void deleteByFavorite(int product_no);
+	void deleteByFavorite(int favorite_no);
 
 }

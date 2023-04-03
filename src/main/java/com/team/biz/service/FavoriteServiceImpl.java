@@ -28,8 +28,8 @@ public class FavoriteServiceImpl implements FavoriteService {
 	}
 
 	@Override
-	public void deleteByFavorite(int product_no) {
-		favoriteDao.deleteByFavorite(product_no);
+	public void deleteByFavorite(int favorite_no) {
+		favoriteDao.deleteByFavorite(favorite_no);
 
 	}
 
