@@ -54,19 +54,19 @@ public class FavoriteController {
 		}
 		
 	}
-	@GetMapping("/like_Detail")
-	public String countFavorite(HttpSession session, Model model) {
+	@GetMapping("/favorite_Count_List")
+	public String checkFavorite(HttpSession session, Model model) {
 		// 로그인 확인 
 				MemberVO loginUser = (MemberVO)session.getAttribute("loginUser");
 				
 				if (loginUser == null) { // 로그인이 안된 경우
 					return "member/login";
 				} else {
+					FavoriteVO vo = favoriteService.checkFavorite(vo.getFavorite_no());
 					
-				
-					}
-	}
-				
-	
+				return "";
+			}
+	      }
+		
 	
 }

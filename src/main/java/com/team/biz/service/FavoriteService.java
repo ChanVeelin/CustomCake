@@ -12,6 +12,6 @@ public interface FavoriteService {
 
 	void deleteByFavorite(int favorite_no);
 	
-	void findLike(int favorite_no);
+	void checkFavorite(int favorite_no);
 
 }
