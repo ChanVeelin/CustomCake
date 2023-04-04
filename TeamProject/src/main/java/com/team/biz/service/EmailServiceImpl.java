@@ -18,12 +18,14 @@ public class EmailServiceImpl implements EmailService {
 	@Autowired
 	private JavaMailSender mailSender;
 	
+	@Autowired
+	private MemberService memberService;
 	
 	@Override
 	public void sendMail(Email email) {
 		
 		MemberVO mvo = new MemberVO();
-		
+		String pwd =mvo.getPwd();
 		try {
 			MimeMessage msg = mailSender.createMimeMessage();
 			
@@ -31,7 +33,7 @@ public class EmailServiceImpl implements EmailService {
 			
 			msg.addFrom(new InternetAddress[] {new InternetAddress(email.getSenderMail(), email.getSenderName())});
 			msg.setSubject("["+email.getReceiverName()+"]"+"님 요청하신 비밀번호 입니다.","UTF-8");
-			msg.setText("요청하신 비밀번호는 ["+mvo.getPwd()+"] 입니다.","UTF-8");//TEXT
+			msg.setText("요청하신 비밀번호는 ["+memberService.getNamePwd(pwd)+"] 입니다.","UTF-8");//TEXT
 			mailSender.send(msg);
 		} catch (Exception e) {
 			e.printStackTrace();

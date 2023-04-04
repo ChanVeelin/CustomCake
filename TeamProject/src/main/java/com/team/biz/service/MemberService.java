@@ -22,4 +22,6 @@ public interface MemberService {
 	public String selectIdByNameEmail(MemberVO vo);
 	//비밀번호 : 이름 아이디 이메일 
 	public String selectPwdByIdNameEmail(MemberVO vo);
+	//이메일 보내기
+	public String getNamePwd(String pwd);
 }

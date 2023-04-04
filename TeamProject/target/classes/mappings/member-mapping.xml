@@ -32,4 +32,8 @@
 		UPDATE member SET pwd=#{pwd} WHERE id=#{id}
 	</update>
 	
+	<!-- 메일 보내기 -->
+	<select id="getNamePwd" resultType="member">
+		select * from member where name=#{name}
+	</select>
 </mapper>

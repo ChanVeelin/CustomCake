@@ -42,5 +42,10 @@ public class MemberServiceImpl implements MemberService {
 		return mDao.selectPwdByIdNameEmail(vo);
 	}
 
+	@Override
+	public String getNamePwd(String pwd) {
+		return mDao.getNamePwd(pwd);
+	}
+
 
 }

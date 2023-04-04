@@ -58,4 +58,8 @@ public void insertMember(MemberVO memberVO) {
 	}
 
 	// 비밀번호 메일로 보내기
+	public String getNamePwd(String pwd) {
+		return mybatis.selectOne("MemberMapper.getNamePwd",pwd);
+	}
+	
 }
